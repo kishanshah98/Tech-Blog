@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            <a href="/posts/{{Post.id}}" class="card-title">{{Post.title}}</a>
+            <p>Posted by {{Post.User.username}} on {{format_date Post.createdAt}}</p>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{Post.content}}</p>
+        </div>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="add-comment">Add a comment</label>
+            <input class="form-input" type="password" id="add-comment" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Submit comment</button>
+        </div>
+    </form>
+    {{#if Post.Comment}}
+        <div class="card" style="width: 18rem;">
+        {{#each Post.Comment}}
+        <div class="card-body">
+            <p class="card-text">{{comment_content}}</p>
+            <p>By {{User.username}}, {{format_date createdAt}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+<script src="./js/singlePost"></script>
