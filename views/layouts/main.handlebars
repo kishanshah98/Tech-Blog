@@ -16,7 +16,7 @@
         The Tech Blog
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
+        <!-- Conditionally render signin or logout links -->
         {{#if logged_in}}
         <a href="/homepage">Home</a>
         <a href="/dashboard">Dashboard</a>
@@ -25,7 +25,7 @@
         {{else}}
         <a href="/homepage">Home</a>
         <a href="/dashboard">Dashboard</a>
-        <a href="/login">login</a>
+        <a href="/signin">Sign In</a>
 
         {{/if}}
       </nav>
