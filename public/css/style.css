@@ -1,3 +1,21 @@
-/* .card-header {
+header {
+    background-color: maroon;
+    color: white
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-} */
+    margin: 15px;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
