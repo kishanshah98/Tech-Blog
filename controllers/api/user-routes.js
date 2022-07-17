@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
             attributes: { exclude: ['password'] }
         });
 
-        res.json(userData);
+        // res.json(userData);
 
     } catch (err) {
         console.log(err);
@@ -46,7 +46,7 @@ router.get('/:id', async (req, res) => {
             return;
         }
 
-        res.json(userData)
+        // res.json(userData)
 
     } catch (err) {
         console.log(err);
@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
             req.session.username = userData.username
             req.session.logged_in = true;
 
-            res.json(userData);
+            // res.json(userData);
         });
     } catch (err) {
         res.status(400).json(err);
@@ -133,7 +133,7 @@ router.put('/:id', async (req, res) => {
             return;
         }
 
-        res.json(userData);
+        // res.json(userData);
 
     } catch (err) {
         console.log(err);
@@ -154,7 +154,7 @@ router.delete('/:id', async (req, res) => {
             return;
         }
 
-        res.json(userData);
+        // res.json(userData);
 
     } catch (err) {
         console.log(err);

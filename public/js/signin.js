@@ -1,8 +1,8 @@
 const signinFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#username-signin').value.trim();
-    const password = document.querySelector('#password-signin').value.trim();
+    const username = document.querySelector('#username').value.trim();
+    const password = document.querySelector('#password').value.trim();
   
     if (username && password) {
       const response = await fetch('/api/users/signin', {
@@ -12,11 +12,11 @@ const signinFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('dashboard');
       } else {
         alert(response.statusText);
       }
     }
   };
   
-  document.querySelector('.signin-form').addEventListener('submit', signinFormHandler);
+  document.getElementById('submitBtn').addEventListener('submit', signinFormHandler);

@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     try {
         const commentData = await Comment.findAll();
 
-        res.json(commentData);
+        // res.json(commentData);
 
     } catch (err) {
         console.log(err);
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
             }
         });
 
-        res.json(commentData);
+        // res.json(commentData);
 
     } catch (err) {
         console.log(err);
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
             user_id: req.session.user_id,
         });
 
-        res.json(commentData);
+        // res.json(commentData);
 
     } catch (err) {
         console.log(err);
@@ -62,7 +62,7 @@ router.put('/:id', async (req, res) => {
             return;
         }
 
-        res.json(commentData);
+        // res.json(commentData);
 
     } catch (err) {
         console.log(err);
@@ -83,7 +83,7 @@ router.delete('/:id', async (req, res) => {
             return;
         }
 
-        res.json(commentData);
+        // res.json(commentData);
 
     } catch (err) {
         console.log(err);
